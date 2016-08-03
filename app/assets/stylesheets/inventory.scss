@@ -1,0 +1,17 @@
+.inventory
+	img {
+		max-width: 100%;
+		margin-bottom: 30px;
+	}
+	.listed-inventory {
+		font-size: 20px;
+		margin: 10px;
+		float: left;
+		img {
+			display: block;
+			margin-bottom: 10px;
+		}
+	}
+.clear-formatting {
+	clear: both;
+}

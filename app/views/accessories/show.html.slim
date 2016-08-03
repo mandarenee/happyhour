@@ -1,0 +1,14 @@
+p id="notice"
+  = notice
+
+.text-center
+  h1 = @accessory.name
+  
+  - if @accessory.image
+    = link_to image_tag(@accessory.image.url(:large)), @accessory.image.url
+  h4
+    = link_to 'Edit', edit_accessory_category_accessory_path(@accessory_category.id, @accessory.id)
+    br
+    = link_to 'Delete', accessory_category_path(@accessory_category.id), method: :delete
+    br
+    = link_to 'Back', accessory_category_accessories_path

@@ -1,0 +1,18 @@
+= form_for @accessory_category, :html => { :multipart => true } do |f|
+  - if @accessory_category.errors.any?
+    div id="error_explanation"
+      h2 
+        = pluralize(@accessory_category.errors.count, "error")
+        | prohibited this accessory category from being saved:
+
+      ul
+        = @accessory_category.errors.full_messages.each do |message|
+          li = message
+
+  div.field
+    = f.label :name
+    br
+    = f.text_field :name
+
+  div.actions
+    = f.submit

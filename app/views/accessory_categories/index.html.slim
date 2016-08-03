@@ -1,0 +1,13 @@
+.inventory
+	.container
+		.text-center
+			h1 Accessories
+		ul style="list-style-type:none"
+			- @accessory_categories.each do |accessory_category|
+				li.listed-inventory 
+					= link_to (accessory_category_accessories_path(accessory_category.id))
+						- if accessory_category.accessories.first && accessory_category.accessories.first.image
+							= image_tag accessory_category.accessories.first.image.url(:large)	
+						.text-center = accessory_category.name
+
+		.clear-formatting = link_to 'New', new_accessory_category_path

@@ -1,0 +1,14 @@
+.inventory
+	.container
+		.text-center
+			h1 Inventory
+		ul style="list-style-type:none"
+			- @inventory_categories.each do |inventory_category|
+				li.listed-inventory.col-md-3.col-sm-4.col-xs-12 
+				  = link_to(inventory_category_inventories_path(inventory_category.id)) do
+						- if inventory_category.inventories.first && inventory_category.inventories.first.image
+							= image_tag inventory_category.inventories.first.image.url(:large)
+						.text-center = inventory_category.name
+
+		.clear-formatting 
+			= link_to 'New', new_inventory_category_path

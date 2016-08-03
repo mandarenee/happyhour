@@ -5,18 +5,13 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'static_pages#home', as: :home
 
-  get 'inventory' => 'inventory#index', as: :inventory_list
-  get 'inventory/champagne_bar' => 'inventory#champagne_bar', as: :champagne_bar
-  get 'inventory/champagne_barback' => 'inventory#champagne_barback', as: :champagne_barback
-  get 'inventory/companion_sets' => 'inventory#companion_sets', as: :companion_sets
-  get 'inventory/julep_bar' => 'inventory#julep_bar', as: :julep_bar
-  get 'inventory/julep_barback' => 'inventory#julep_barback', as: :julep_barback
+  resources :inventory_categories do
+    resources :inventories
+  end
 
-  get 'accessories' => 'accessories#index', as: :accessories_list
-  get 'accessories/bar_serviceware' => 'accessories#bar_serviceware', as: :bar_serviceware
-  get 'accessories/floral_vases' => 'accessories#floral_vases', as: :floral_vases
-  get 'accessories/framed_signs' => 'accessories#framed_signs', as: :framed_signs
-  get 'accessories/word_signs' => 'accessories#word_signs', as: :word_signs
+  resources :accessory_categories do
+    resources :accessories
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

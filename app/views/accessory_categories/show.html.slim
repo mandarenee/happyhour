@@ -1,0 +1,20 @@
+p id="notice"
+  = notice
+
+.text-center
+  h1 = @accessory_category.name
+
+ul style="list-style-type:none"
+  - @accessories.each do |accessory|
+    li.listed-inventory 
+      = link_to(accessory_category_accessory_path(@accessory_category.id, accessory)) do
+        - if accessory_category.accessories.first && accessory_category.accessories.first.image
+          = image_tag accessory_category.accessories.first.image.url(:large)
+        .text-center = accessory.name
+
+h4.clear-formatting
+  = link_to 'Edit', edit_accessory_category_path(@accessory_category.id)
+  br
+  = link_to 'Destroy', @accessory_category, method: :delete
+  br
+  = link_to 'Back', accessory_categories_path

@@ -1,0 +1,20 @@
+p id="notice"
+	= notice
+
+.text-center
+  h1 = @inventory_category.name
+
+ul style="list-style-type:none"
+  - @inventories.each do |inventory|
+    li.listed-inventory 
+      = link_to(inventory_category_inventory_path(@inventory_category.id, inventory.id)) do
+        - if inventory.image
+          = image_tag inventory.image.url(:large)
+        .text-center = inventory.name
+
+h4.clear-formatting
+  = link_to 'Edit', edit_inventory_category_path(@inventory_category)
+  br
+  = link_to 'Destroy', @inventory_category, method: :delete
+  br
+  = link_to 'Back', inventory_categories_path

@@ -1,0 +1,14 @@
+p id="notice"
+	= notice
+
+.text-center
+  h1 = @inventory.name
+  
+  - if @inventory.image
+	  = link_to image_tag(@inventory.image.url(:large)), @inventory.image.url
+  h4
+		= link_to 'Edit', edit_inventory_category_inventory_path(@inventory_category.id, @inventory)
+		br
+		= link_to 'Delete', inventory_category_inventory_path(@inventory_category, @inventory), method: :delete
+		br
+		= link_to 'Back', inventory_category_inventories_path

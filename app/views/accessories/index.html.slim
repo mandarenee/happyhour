@@ -1,7 +1,17 @@
 .inventory
 	.container
-		ul
-			li = link_to 'Bar Serviceware', bar_serviceware_path
-			li = link_to 'Floral Vases', floral_vases_path
-			li = link_to 'Framed Signs', framed_signs_path
-			li = link_to 'Word Signs', word_signs_path
+		.text-center
+			h1 = @accessory_category.name
+		ul style="list-style-type:none"
+			- @accessories.each do |accessory|
+				li.listed-inventory 
+					= link_to(accessory_category_accessory_path(@accessory_category, accessory)) do
+						- if accessory.image
+							= image_tag accessory.image.url(:large)
+						.text-center = accessory.name
+
+		= link_to 'New', new_accessory_category_accessory_path
+		br
+		= link_to 'Delete', accessory_category_path(@accessory_category), method: :delete
+		br
+		= link_to 'Back', accessory_categories_path

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Happy Hour</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <header>
+    <div id="main-container" class="container">
+      <div class="col header">
+        <div class="text-center">
+          <%= render partial: "layouts/navbar" %>
+        </div>
+      </div>
+    </div>
+  </header>
+  <body>
+    <div id="main-container" class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>
