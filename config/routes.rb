@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'static_pages#home', as: :home
+  get 'static_pages/todolist' => 'static_pages#todolist', as: :todolist
+  get 'static_pages/all_inventory_offered' => 'static_pages#all_inventory_offered', as: :all_inventory_offered
 
   resources :inventory_categories do
     resources :inventories

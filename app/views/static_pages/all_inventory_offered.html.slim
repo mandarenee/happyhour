@@ -1,0 +1,13 @@
+h1 Happy Hour
+h2.text-center Inventory
+- @inventory_categories.each do |inventory_category|
+	h3 = inventory_category.name
+	ul 
+		- inventory_category.inventories.each do |inventory|
+			li = inventory.name
+h2.text-center Accessories
+- @accessory_categories.each do |accessory_category|
+	h3 = accessory_category.name
+	ul 
+		- accessory_category.accessories.each do |accessory|
+			li = accessory.name

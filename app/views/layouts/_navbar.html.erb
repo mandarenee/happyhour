@@ -11,9 +11,8 @@
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <h2 class="pull-left">Happy Hour</h2>
+      <h2 class="pull-left"><%= link_to 'Happy Hour', home_path %></h2>
       <ul class="nav navbar-nav pull-right">
-        <li><%= link_to 'Home', home_path %> <span class="sr-only">(current)</span></li>
         <li><%= link_to 'Inventory', inventory_categories_path %></li>
         <li><%= link_to 'Accessories', accessory_categories_path %></li>
       </ul>
