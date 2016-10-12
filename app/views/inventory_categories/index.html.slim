@@ -7,11 +7,15 @@
 			- @inventory_categories.each do |inventory_category|
 				.row
 					h3 = inventory_category.name
-					ul style="list-style-type:none"
+					.row
 						- inventory_category.inventories.each do |inventory|
-							li.listed-inventory.col-md-3.col-sm-4.col-xs-12 
+							.listed-inventory.col-sm-4.col-xs-12
 								= image_tag inventory_category.inventories.first.image.url(:large)
-								= inventory.name
+								h4 = inventory.name
+								br
+								= link_to 'Edit', edit_inventory_category_path(inventory)
+								br
+								= link_to 'Destroy', @inventory_category, method: :delete
 				hr
 
 		.clear-formatting 

@@ -2,12 +2,20 @@
 	.container
 		.text-center
 			h1 Accessories
-		ul style="list-style-type:none"
-			- @accessory_categories.each do |accessory_category|
-				li.listed-inventory 
-					= link_to (accessory_category_accessories_path(accessory_category.id))
-						- if accessory_category.accessories.first && accessory_category.accessories.first.image
-							= image_tag accessory_category.accessories.first.image.url(:large)	
-						.text-center = accessory_category.name
 
-		.clear-formatting = link_to 'New', new_accessory_category_path
+			- @accessory_categories.each do |accessory_category|
+				.row
+					h3 = accessory_category.name
+					.row
+						- accessory_category.accessories.each do |accessory|
+							.listed-inventory.col-sm-4.col-xs-12
+								= image_tag accessory_category.accessories.first.image.url(:large)
+								h4 = accessory.name
+								br
+								= link_to 'Edit', edit_accessory_category_path(accessory)
+								br
+								= link_to 'Destroy', @accessory_category, method: :delete
+				hr
+
+		.clear-formatting 
+			= link_to 'New', new_accessory_category_path

@@ -1,17 +1,26 @@
-.inventory
+.inventory {
 	img {
 		max-width: 100%;
 		margin-bottom: 30px;
 	}
+
 	.listed-inventory {
 		font-size: 20px;
-		margin: 10px;
-		float: left;
+		font-family: 'Abhaya Libre', serif;
 		img {
 			display: block;
 			margin-bottom: 10px;
+			margin-right: auto;
+			margin-left: auto;
 		}
 	}
+	h3 {
+		font-size: 30px;
+		font-family: 'Abhaya Libre', serif;
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+}
 .clear-formatting {
 	clear: both;
 }

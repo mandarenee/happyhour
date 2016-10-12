@@ -73,13 +73,13 @@ div {
 }
 
 header {
-  .header {
-    h1 {
-      font-size: 90px;
-    }
-    font-family: 'Great Vibes', cursive;
-    margin: 10px 0;
+  h1 {
+    font-size: 90px;
   }
+  h2 {
+    font-family: 'Great Vibes', cursive;
+  }
+  margin: 10px 0;
 }
 
 .background_image {
@@ -91,4 +91,12 @@ header {
     margin-top: -80px;
     overflow: hidden;
   }
+}
+
+.readable-text {
+  font-family: 'Abhaya Libre', serif;
+}
+
+.navbar-nav {
+  margin: 7.5px -15px;
 }
