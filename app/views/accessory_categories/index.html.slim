@@ -6,13 +6,14 @@
 			- @accessory_categories.each do |accessory_category|
 				.row
 					h3 = accessory_category.name
+					= link_to('Add accessory', new_accessory_category_accessory_path(accessory_category))
 					.row
 						- accessory_category.accessories.each do |accessory|
 							.listed-inventory.col-sm-4.col-xs-12
-								= image_tag accessory_category.accessories.first.image.url(:large)
+								= image_tag accessory.image.url(:large)
 								h4 = accessory.name
 								br
-								= link_to 'Edit', edit_accessory_category_path(accessory)
+								= link_to 'Edit', edit_accessory_category_accessory_path(accessory_category, accessory)
 								br
 								= link_to 'Delete', [accessory_category, accessory], method: :delete
 				hr
