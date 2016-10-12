@@ -3,7 +3,6 @@
 		.text-center
 			h1 Inventory
 
-
 			- @inventory_categories.each do |inventory_category|
 				.row
 					h3 = inventory_category.name
@@ -15,7 +14,8 @@
 								br
 								= link_to 'Edit', edit_inventory_category_path(inventory)
 								br
-								= link_to 'Destroy', @inventory_category, method: :delete
+								= link_to 'Delete', [inventory_category, inventory], method: :delete
+
 				hr
 
 		.clear-formatting 

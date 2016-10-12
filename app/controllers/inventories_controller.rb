@@ -24,7 +24,7 @@ class InventoriesController < ApplicationController
 		@inventory = @inventory_category.inventories.build(inventory_params)
 
     if @inventory.save
-      redirect_to inventory_category_inventory_path(@inventory_category.id, @inventory.id), notice: 'Inventory was successfully created.'
+      redirect_to inventory_categories_path, notice: 'Inventory was successfully created.'
     else
       render :new
     end
@@ -35,7 +35,7 @@ class InventoriesController < ApplicationController
     @inventory = @inventory_category.inventories.find(params[:id])
 
     if @inventory.update(inventory_params)
-      redirect_to inventory_category_inventory_path(@inventory_category.id, @inventory.id), notice: 'Inventory was successfully updated.'
+      redirect_to inventory_categories_path, notice: 'Inventory was successfully updated.'
     else
       render :edit
     end
@@ -46,7 +46,7 @@ class InventoriesController < ApplicationController
     @inventory = Inventory.find(params[:id])
     @inventory.destroy
     
-    redirect_to inventory_category_path(@inventory_category), notice: 'Inventory was successfully destroyed.'
+    redirect_to inventory_categories_path
   end
 
 private

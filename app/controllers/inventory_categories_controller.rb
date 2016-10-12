@@ -39,6 +39,12 @@ class InventoryCategoriesController < ApplicationController
     redirect_to inventory_categories_path, notice: 'Inventory Category was successfully destroyed.'
   end
 
+  def destroy_inventory
+    @inventory_category = InventoryCategory.find(params[:inventory_category_id])
+    @inventory = Inventory.find(params[:id])
+    @inventory.destroy
+  end
+
 private
   def inventory_category_params
     params.require(:inventory_category).permit(:name)

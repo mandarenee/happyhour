@@ -24,7 +24,7 @@ class AccessoriesController < ApplicationController
     @accessory = @accessory_category.accessories.build(accessory_params)
 
     if @accessory.save
-      redirect_to accessory_category_accessory_path(@accessory_category.id, @accessory.id), notice: 'Accessory was successfully created.'
+      redirect_to accessory_categories_path, notice: 'Accessory was successfully created.'
     else
       render :new
     end
@@ -35,7 +35,7 @@ class AccessoriesController < ApplicationController
     @accessory = @accessory_category.accessories.find(params[:id])
 
     if @accessory.update(accessory_params)
-      redirect_to accessory_category_accessory_path(@accessory_category.id, @accessory.id), notice: 'Accessory was successfully created.'
+      redirect_to accessory_categories_path, notice: 'Accessory was successfully created.'
     else
       render :edit
     end
@@ -46,7 +46,7 @@ class AccessoriesController < ApplicationController
     @accessory = Accessory.find(params[:id])
     @accessory.destroy
 
-    redirect_to accessory_category_path(@accessory_category), notice: 'Accessory was successfully destroyed.'
+    redirect_to accessory_categories_path
   end
 
 private
