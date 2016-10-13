@@ -9,7 +9,7 @@
 					= link_to('Add accessory', new_accessory_category_accessory_path(accessory_category))
 					.row
 						- accessory_category.accessories.each do |accessory|
-							.listed-inventory.col-sm-4.col-xs-12
+							.listed-inventory.col-sm-6.col-xs-12
 								= image_tag accessory.image.url(:large)
 								h4 = accessory.name
 								br

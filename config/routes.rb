@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     resources :accessories
   end
 
+  get 'contact' => 'static_pages#contact', as: :contact
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

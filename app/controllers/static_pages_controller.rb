@@ -9,4 +9,7 @@ class StaticPagesController < ApplicationController
 		@inventory_categories = InventoryCategory.all
 		@accessory_categories = AccessoryCategory.all
 	end
+	
+	def contact
+	end
 end

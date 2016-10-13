@@ -5,10 +5,13 @@
 	}
 
 	.listed-inventory {
+		display:flex;
+	  flex-direction:column;
+	  flex-wrap:wrap;
 		font-size: 20px;
 		font-family: 'Abhaya Libre', serif;
 		img {
-			display: block;
+			display: inline-block;
 			margin-bottom: 10px;
 			margin-right: auto;
 			margin-left: auto;
@@ -23,4 +26,16 @@
 }
 .clear-formatting {
 	clear: both;
+}
+
+.listed-inventory .listed-item {
+	width: 250px;
+}
+
+img.horizontal-image {
+	height: 350px;
+}
+
+img.vertical-image {
+	height: 650px;
 }

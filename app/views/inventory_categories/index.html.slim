@@ -9,7 +9,7 @@
 					= link_to('Add inventory', new_inventory_category_inventory_path(inventory_category))
 					.row
 						- inventory_category.inventories.each do |inventory|
-							.listed-inventory.col-sm-4.col-xs-12
+							.listed-inventory.col-sm-6.col-xs-12
 								= image_tag inventory.image.url(:large)
 								h4 = inventory.name
 								br
