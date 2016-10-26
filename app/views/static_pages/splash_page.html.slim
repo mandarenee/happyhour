@@ -1,10 +1,13 @@
 .splashPage
 	.container
 		.row
-			.col-sm-4
+			.col-md-4
 				.wording
 					.logo
-						= image_tag("cropped_logo.png")
+						.logoPhoto = image_tag("cropped_logo.png")
+						.visible-sm-down
+							.mobileMainPhoto = image_tag("Champagne Bar- Debut Photo.png")
+
 					.contactInfo.text-center.readable-text
 						h4 For more information, please to contact:
 						h4 
@@ -12,6 +15,7 @@
 						h4 karla@happyhourbarrentals.com
 						.facebookLogo
 							= link_to(image_tag("facebook_logo.png"), "https://www.facebook.com/Happy-Hour-Designer-Bar-Rentals-1300043366712918/", target: "_blank")
-			.col-sm-8
-				.splashPage-mainPhoto
-					= image_tag("Champagne Bar- Debut Photo.png")
+			.col-md-8
+				.hidden-sm-down
+					.splashPage-mainPhoto
+						= image_tag("Champagne Bar- Debut Photo.png")
