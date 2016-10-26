@@ -12,4 +12,7 @@ class StaticPagesController < ApplicationController
 	
 	def contact
 	end
+
+	def splash_page
+	end
 end

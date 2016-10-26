@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'static_pages#home', as: :home
+  root 'static_pages#splash_page', as: :spash_page
+  # root 'static_pages#home', as: :home
+  get 'home' => 'static_pages#home', as: :home
   get 'static_pages/todolist' => 'static_pages#todolist', as: :todolist
   get 'static_pages/all_inventory_offered' => 'static_pages#all_inventory_offered', as: :all_inventory_offered
 

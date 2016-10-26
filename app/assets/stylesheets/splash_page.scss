@@ -1,0 +1,39 @@
+.splashPage {
+	background-color: #FEFEFE;
+	.splashPage-mainPhoto {
+		img {
+			display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+			width: 80%;
+			border:1px solid #7F7F7F;
+			box-shadow: 5px 5px 15px grey;
+		}
+	}
+	.logo {
+		img {
+			display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+			width: 250px;
+		}
+	}
+	.wording {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		border:1px solid #7F7F7F;
+		box-shadow: 5px 5px 15px grey;
+		.contactInfo {
+			.facebookLogo {
+				margin-top: 40px;
+			}
+			margin-top: 50px;
+			h3 {
+				color: #158DC1;
+			}
+			.facebookLogo img {
+				width: 50px;
+			}
+		}
+	}
+}
