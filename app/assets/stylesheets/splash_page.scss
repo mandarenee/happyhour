@@ -1,4 +1,11 @@
 .splashPage {
+	.bottomLeftImage img {
+		margin-top: 23px;
+		margin-bottom: 15px;
+		width: 100%;
+		border:1px solid #7F7F7F;
+		box-shadow: 5px 5px 15px grey;
+	}
 	.visible-sm-down {
 		@media screen and (min-width: 992px) {
 			display: none;
@@ -39,7 +46,8 @@
 	    margin-left: auto;
 	    margin-right: auto;
 	    @media screen and (min-width: 992px) {
-				width: 80%;
+				width: 90%;
+				margin-bottom: 15px;
 			}
 			border:1px solid #7F7F7F;
 			box-shadow: 5px 5px 15px grey;
@@ -75,17 +83,17 @@
 				@media screen and (max-width: 544px) {
 					margin-top: 10px;
 				}
-				margin-top: 40px;
+				margin-top: 10px;
 			}
 			@media screen and (min-width: 992px) {
-				margin-top: 50px;
+				margin-top: 10px;
 			}
 			h3 {
 				color: #158DC1;
 			}
 			.facebookLogo img {
 				@media screen and (min-width: 544px) {
-					width: 50px;
+					width: 45px;
 				}
 				@media screen and (max-width: 544px) {
 					width: 40px;
@@ -93,4 +101,7 @@
 			}
 		}
 	}
+}
+.spacer-sm {
+	margin-top: 20px;
 }
