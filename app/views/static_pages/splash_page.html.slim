@@ -1,10 +1,11 @@
 .splashPage
+	p.happy-hour-bar-rentals Happy Hour Designer Bar Rentals Happy Hour Bar Rentals
 	.container
 		.row
 			.col-md-4
 				.wording
 					.logo
-						.logoPhoto = image_tag("cropped_logo.png")
+						.logoPhoto = image_tag("cropped_logo.png", alt: "Happy Hour Bar Rentals Logo")
 						.visible-sm-down
 							.mobileMainPhoto = image_tag("Champagne Bar- Debut Photo.png")
 					hr
@@ -17,14 +18,14 @@
 						h5 ~ Serve your Cocktails with Class ~
 						h5 Specializing in Unique Bar & Barback Rentals 
 						h5 Personalize by adding your own Monogram and/or Logo
-						.spacer-sm
+						p.happy-hour-bar-rentals Happy Hour Designer Bar Rentals Happy Hour Bar Rentals
 						h5 Why Limit Happy to Just an Hour?
 
 
 						.facebookLogo
-							= link_to(image_tag("facebook_logo.png"), "https://www.facebook.com/Happy-Hour-Designer-Bar-Rentals-1300043366712918/", target: "_blank")
-				.bottomLeftImage = image_tag("julep_bar3.jpg")
+							= link_to(image_tag("facebook_logo.png"), "https://www.facebook.com/Happy-Hour-Designer-Bar-Rentals-1300043366712918/", target: "_blank", alt: "Happy Hour Designer Bar Rental")
+				.bottomLeftImage = image_tag("julep_bar3.jpg", alt: "Happy Hour Designer Bar Rental")
 			.col-md-8
 				.hidden-sm-down
 					.splashPage-mainPhoto
-						= image_tag("Champagne Bar- Debut Photo.png")
+						= image_tag("Champagne Bar- Debut Photo.png", alt: "Happy Hour Designer Bar Rental")
